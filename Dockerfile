@@ -1,7 +1,12 @@
-FROM python:3.12.5-slim-bookworm #改這裡
+FROM python:3.12.5-slim-bookworm 
+# 自行設定 image
 
 RUN apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y lib32z1 xinetd python3
+    apt-get install -y lib32z1 xinetd 
+
+RUN apt-get install -y python3
+# 若有需要可自行新增需要套件
+
 
 RUN useradd -m ctf
 
