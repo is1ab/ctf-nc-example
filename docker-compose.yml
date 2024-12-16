@@ -1,0 +1,6 @@
+services:
+  chal:
+    build: ./
+    ports:
+      - "48763:80"
+
