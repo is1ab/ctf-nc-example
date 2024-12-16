@@ -2,5 +2,5 @@ services:
   chal:
     build: ./
     ports:
-      - "48763:80"
-
+      - "80:80"
+# 可依據需求自行更改 port，對外:對內
