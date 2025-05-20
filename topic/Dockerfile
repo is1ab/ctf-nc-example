@@ -1,12 +1,11 @@
-FROM python:3.12.5-slim-bookworm 
+FROM ubuntu:22.04
 # 自行設定 image
 
 RUN apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y lib32z1 xinetd 
+    apt-get install -y xinetd #lib32z1 
 
 RUN apt-get install -y python3
 # 若有需要可自行新增需要套件
-
 
 RUN useradd -m ctf
 
@@ -21,6 +20,8 @@ RUN chmod +x /start.sh
 COPY ./bin/ /home/ctf/
 RUN chown -R root:ctf /home/ctf && \
     chmod -R 750 /home/ctf 
+
+# 自行加上需要的指令
 
 CMD ["/start.sh"]
 

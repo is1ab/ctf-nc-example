@@ -3,4 +3,12 @@ services:
     build: ./
     ports:
       - "80:80"
+    # env_file:
+    #   - flag
+    # environment:
+    #   - FLAG=${FLAG}
+    # GZCTF為 GZCTF_FLAG
+
+
+    
 # 可依據需求自行更改 port，對外:對內
