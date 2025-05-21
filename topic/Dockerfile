@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 # 自行設定 image
 
 RUN apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y xinetd lib32z1 
+    apt-get install -y xinetd dos2unix lib32z1 
 
 RUN apt-get install -y python3
 # 若有需要可自行新增需要套件
@@ -16,6 +16,7 @@ COPY ./start.sh /start.sh
 RUN echo "Blocked by ctf_xinetd" > /etc/banner_fail
 
 RUN chmod +x /start.sh
+RUN dos2unix /start.sh
 
 COPY ./bin/ /home/ctf/
 RUN chown -R root:ctf /home/ctf && \
