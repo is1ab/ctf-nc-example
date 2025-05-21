@@ -1,14 +1,27 @@
 services:
   chal:
     build: ./
-    ports:
-      - "80:80"
-    # env_file:
-    #   - flag
-    # environment:
-    #   - FLAG=${FLAG}
-    # GZCTF為 GZCTF_FLAG
+    expose:
+      - 80
+    environment:
+      - FLAG # 若需要動態 flag 則不要覆值
+      # - FLAG=flag{this_is_default_flag} # 若需要固定 flag 則覆值
+      # - GZCTF_FLAG=flag{....} # GZCTF為 GZCTF_FLAG
 
+# 可依據需求自行更改 expose port
+# 下面不需要修改
+  services:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - 9000
+    networks:
+      - default
+      - net
 
-    
-# 可依據需求自行更改 port，對外:對內
+networks:
+  default:
+  net:
+    external: true 
+    name: ctfd_frp_containers

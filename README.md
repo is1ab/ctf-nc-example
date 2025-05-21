@@ -18,7 +18,7 @@ topic/ #自行更改名稱
 2. 修改 `topic/bin/run.sh`：
    - 將 `pwd` 替換為您要執行的指令
    - 確保指令路徑正確（預設工作目錄為 `/home/ctf`）
-   - 例如：`timeout 60 ./bin/your_program`
+   - 例如：`timeout 60 ./your_program`
 
 ### 2. 構建映像檔
 有兩種方式可以構建映像檔：

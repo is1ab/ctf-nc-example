@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 # 自行設定 image
 
 RUN apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y xinetd #lib32z1 
+    apt-get install -y xinetd lib32z1 
 
 RUN apt-get install -y python3
 # 若有需要可自行新增需要套件

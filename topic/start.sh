@@ -8,6 +8,9 @@ if [ ! -z "$FLAG" ]; then
     # /home/ctf/flag 是預設 flag 檔案路徑
     echo "$FLAG" > /home/ctf/flag
 fi  
+chmod 640 /home/ctf/flag
+export FLAG=flag{this_is_default_flag}
+FLAG=flag{this_is_default_flag}
 # Add your startup script
 
 # DO NOT DELETE
