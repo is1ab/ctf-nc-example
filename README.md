@@ -4,12 +4,12 @@ CTF 用的 nc 範例
 ## 檔案架構
 topic/ #自行更改名稱    
 ├── bin/  
-│   ├── run.sh #執行檔，修改此檔案來設定要執行的指令  
-│   └── 題目 #自行更改  
-├── start.sh #**若 flag 檔名或路徑有修改 須在此設定**  
-├── Dockerfile #自行更改  
-├── docker-compose.yml #如果不需要可以移除，自行更改  
-└── ctf.xinetd #不要動!!  
+│   ├── run.sh # 執行檔，修改此檔案來設定要執行的指令  
+│   └── 題目 #自行上傳  
+├── start.sh # **若 flag 檔名或路徑有修改 須在此設定**  
+├── Dockerfile # 基本上不會動，可自行更改  
+├── docker-compose.yml # 若要自訂 flag 在此修改，不需自行建立，路徑為 /home/bin/flag  
+└── ctf.xinetd # 不要動!!  
 
 ## 使用說明
 
@@ -19,7 +19,7 @@ topic/ #自行更改名稱
    - 將 `pwd` 替換為您要執行的指令
    - 確保指令路徑正確（預設工作目錄為 `/home/ctf`）
    - 例如：`timeout 60 ./your_program`
-3. 可以將整個資料夾壓縮成 zip 檔案後上傳到 ctfd 的 owl plugins，或是上傳到 server 後 build image  
+3. 可以將整個 `topic` 資料夾壓縮成 zip 檔案後上傳到 ctfd 的 owl plugins，或是上傳到 server 後 build image  
 ### 2. 構建映像檔
 有兩種方式可以構建映像檔：
 
