@@ -8,7 +8,7 @@ topic/ #自行更改名稱
 │   └── 題目 #自行上傳  
 ├── start.sh # **若 flag 檔名或路徑有修改 須在此設定**  
 ├── Dockerfile # 基本上不會動，可自行更改  
-├── docker-compose.yml # 若要自訂 flag 在此修改，不需自行建立，路徑為 /home/bin/flag  
+├── docker-compose.yml # 若要自訂 flag 在此修改，不需自行建立，路徑為 /home/ctf/flag  
 └── ctf.xinetd # 不要動!!  
 
 ## 使用說明
